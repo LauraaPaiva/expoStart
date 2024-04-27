@@ -11,6 +11,8 @@ import Botao from "./src/components/Botao";
 import Contador from "./src/components/Contador";
 import Pai from "./src/components/Direta/Pai";
 import Filho from "./src/components/Direta/Filho";
+import Pai2 from "./src/components/Indireta/Pai";
+import Filho2 from "./src/components/Indireta/Filho";
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
       <Botao />
       <Contador numeroInicial={50} />
       <Pai />
+      <Pai2 />
     </SafeAreaView>
   );
 }
