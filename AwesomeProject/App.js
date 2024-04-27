@@ -2,12 +2,12 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import React from "react";
 
-import ContadorV2 from "./src/components/ContadorV2/ContadorV2";
+import Diferenciar from "./src/components/Diferenciar/Diferenciar";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ContadorV2></ContadorV2>
+      <Diferenciar />
     </SafeAreaView>
   );
 }
@@ -19,6 +19,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    // textAlign: "center",
   },
 });
