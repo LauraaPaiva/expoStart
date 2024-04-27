@@ -20,4 +20,19 @@ export default StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
   },
+  display: {
+    backgroundColor: "#000",
+    width: 300,
+  },
+  displayText: {
+    color: "#FFF",
+  },
+  botoesHorizontais: {
+    flexDirection: "row",
+    padding: 20,
+    justifyContent: "center",
+  },
+  botao: {
+    padding: 20,
+  },
 });
