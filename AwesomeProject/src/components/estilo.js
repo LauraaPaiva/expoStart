@@ -35,4 +35,9 @@ export default StyleSheet.create({
   botao: {
     padding: 20,
   },
+  flexV1: {
+    flexGrow: 1,
+    justifyContent: "space-evenly",
+    padding: 20,
+  },
 });
