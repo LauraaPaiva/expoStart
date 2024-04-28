@@ -40,4 +40,11 @@ export default StyleSheet.create({
     justifyContent: "space-evenly",
     padding: 20,
   },
+  flexV2: {
+    flex: 1,
+    width: "100%",
+    justifyContent: "space-evenly", //eixo princial
+    alignItems: "center", // eixo cruzado
+    padding: 20,
+  },
 });
