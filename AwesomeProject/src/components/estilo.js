@@ -56,4 +56,9 @@ export default StyleSheet.create({
     padding: 20,
     backgroundColor: "#393939",
   },
+  flexV4: {
+    flexGrow: 1,
+    width: "100%",
+    backgroundColor: "#ccc",
+  },
 });
