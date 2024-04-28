@@ -47,4 +47,13 @@ export default StyleSheet.create({
     alignItems: "center", // eixo cruzado
     padding: 20,
   },
+  flexV3: {
+    flexDirection: "row",
+    justifyContent: "space-between", //eixo princial
+    alignItems: "center", // eixo cruzado
+    height: 250,
+    width: "100%",
+    padding: 20,
+    backgroundColor: "#393939",
+  },
 });
