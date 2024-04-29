@@ -2,12 +2,12 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import React from "react";
 
-import FlexBoxV4 from "./src/components/Layout/FlexBoxV4";
+import Mega from "./src/components/Mega/Mega";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <FlexBoxV4 />
+      <Mega quantidadeDeNumeros={6} />
     </SafeAreaView>
   );
 }
