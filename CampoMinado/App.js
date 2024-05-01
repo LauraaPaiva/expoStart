@@ -32,24 +32,9 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text>Campo Minado</Text>
-        <Text>
-          {params.getColumnsAmount()} x {params.getRowsAmount()}
-        </Text>
-        <Text>{this.minesAmount()}</Text>
-        <StatusBar style="auto" />
-        <Field />
-        <Field opened />
-        <Field opened nearMines={1} />
-        <Field opened nearMines={2} />
-        <Field opened nearMines={3} />
-        <Field opened nearMines={4} />
-        <Field opened nearMines={5} />
-        <Field opened nearMines={6} />
-        <Field opened nearMines={7} />
-        <Field mined />
-        <Field opened mined />
-        <Field opened mined exploded />
-        <Field flagged />
+        <View style={styles.board}>
+          <MineFiled board={this.state.board} />
+        </View>
       </View>
     );
   }
@@ -62,5 +47,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     justifyContent: "space-around",
+  },
+  board: {
+    alignItems: "center",
+    backgroundColor: "#AAA",
   },
 });
