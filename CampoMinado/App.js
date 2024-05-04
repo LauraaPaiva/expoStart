@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Alert } from "react-native";
+import { StyleSheet, Text, View, Alert, SafeAreaView } from "react-native";
 
 import params from "./src/params";
 import Field from "./src/components/Field";
@@ -33,7 +33,7 @@ export default class App extends Component {
     return {
       board: createMineBoard(rows, cols, this.minesAmount()),
       won: false,
-      lose: false,
+      lost: false,
     };
   };
 
@@ -57,14 +57,14 @@ export default class App extends Component {
     this.setState({
       board,
       won,
-      lose,
+      lost,
     });
   };
 
   render() {
     return (
       <>
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
           <Text>Campo Minado</Text>
           <View style={styles.board}>
             <MineFiled
@@ -72,7 +72,7 @@ export default class App extends Component {
               onOpenField={this.onOpenField}
             />
           </View>
-        </View>
+        </SafeAreaView>
       </>
     );
   }
