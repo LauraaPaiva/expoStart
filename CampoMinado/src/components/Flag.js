@@ -6,7 +6,13 @@ export default (props) => {
       <View
         style={[styles.flagPole, props.bigger ? styles.flagPoleBigger : null]}
       />
-      <View style={[styles.flag, props.bigger ? styles.flagBigger : null]} />
+      <View
+        style={[
+          styles.flag,
+          props.bigger ? styles.flagBigger : null,
+          props.off ? styles.flagBiggerOff : null,
+        ]}
+      />
       <View style={[styles.base1, props.bigger ? styles.base1Bigger : null]} />
       <View style={[styles.base2, props.bigger ? styles.base2Bigger : null]} />
     </View>
@@ -31,6 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F22",
     marginLeft: 3,
   },
+
   base1: {
     position: "absolute",
     height: 2,
@@ -53,6 +60,13 @@ const styles = StyleSheet.create({
     marginLeft: 16,
   },
   flagBigger: {
+    height: 10,
+    width: 14,
+    marginLeft: 3,
+  },
+  flagBiggerOff: {
+    position: "absolute",
+    backgroundColor: "#a4a4a4",
     height: 10,
     width: 14,
     marginLeft: 3,

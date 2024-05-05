@@ -21,9 +21,9 @@ export default (props) => {
 
   let color = "#999";
   if (nearMines > 0) {
-    if (nearMines === 1) color = "#0083b7";
+    if (nearMines === 1) color = "#005475";
     if (nearMines === 2) color = "#9000ff";
-    if (nearMines > 2) color = "#ff00d9";
+    if (nearMines > 2) color = "#c700a9";
     if (nearMines > 5) color = "#ff0000";
   }
 
@@ -46,21 +46,14 @@ const styles = StyleSheet.create({
   field: {
     height: params.blockSize,
     width: params.blockSize,
-    borderWidth: params.borderSize,
+    borderRadius: 10,
+    margin: 1,
   },
   regular: {
-    backgroundColor: "#aaa",
-    borderLeftColor: "#CCC",
-    borderTopColor: "#CCC",
-    borderRightColor: "#333",
-    borderBottomColor: "#333",
+    backgroundColor: "#666",
   },
   opened: {
     backgroundColor: "#aaa",
-    borderLeftColor: "#333",
-    borderTopColor: "#333",
-    borderRightColor: "#ccc",
-    borderBottomColor: "#ccc",
     alignItems: "center",
     justifyContent: "center",
   },
