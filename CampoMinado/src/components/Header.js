@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Flag from "./Flag";
+import Mine from "./Mine";
 
 export default (props) => {
   return (
@@ -20,6 +21,12 @@ export default (props) => {
             <Flag bigger off={props.flagOff} />
           </TouchableOpacity>
           <Text style={styles.flagsLeft}>{props.flagsLeft}</Text>
+          <TouchableOpacity
+            style={styles.mineButton}
+            onPress={props.onMinePress}
+          >
+            <Mine />
+          </TouchableOpacity>
         </View>
       </View>
     </>
@@ -69,5 +76,10 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
     fontSize: 20,
+  },
+  mineButton: {
+    marginTop: 20,
+    marginLeft: 20,
+    minWidth: 30,
   },
 });

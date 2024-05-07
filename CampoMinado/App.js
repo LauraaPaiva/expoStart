@@ -7,6 +7,7 @@ import Field from "./src/components/Field";
 import Flag from "./src/components/Flag";
 import MineFiled from "./src/components/MineFiled";
 import Header from "./src/components/Header";
+import LevelSelection from "./src/screens/LevelSelection";
 import {
   createMineBoard,
   cloneBoard,
@@ -38,13 +39,14 @@ export default class App extends Component {
       won: false,
       lost: false,
       flagOff: true,
+      showLevelSelection: false,
     };
   };
 
   onOpenField = (row, column) => {
     const board = cloneBoard(this.state.board);
 
-    if (flagOff) {
+    if (this.state.flagOff) {
       openField(board, row, column);
     } else {
       invertFlags(board, row, column);
@@ -75,13 +77,24 @@ export default class App extends Component {
     this.setState({ flagOff });
   };
 
+  onLevelSelected = (level) => {
+    params.difficultLevel = level;
+    this.setState(this.createState());
+  };
+
   render() {
     return (
       <>
         <SafeAreaView style={styles.container}>
+          <LevelSelection
+            isVisible={this.state.showLevelSelection}
+            onLevelSelected={this.onLevelSelected}
+            onCancel={() => this.setState({ showLevelSelection: false })}
+          />
           <Header
             flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
             onNewGame={() => this.setState(this.createState())}
+            onMinePress={() => this.setState({ showLevelSelection: true })}
             onFlagPress={this.flagActivate}
             flagOff={this.state.flagOff}
           />
